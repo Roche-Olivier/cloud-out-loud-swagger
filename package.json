@@ -1,6 +1,6 @@
 {
   "name": "cloud-out-loud-swagger",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "JWT and passport auth for node applications to access the swagger documents",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "swagger-ui-express": "^5.0.0",
-    "cloud-out-loud-security": "^1.0.5"
+    "cloud-out-loud-security": "^1.0.5",
+    "path": "^0.12.7"
   }
 }

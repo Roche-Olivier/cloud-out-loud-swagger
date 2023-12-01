@@ -1,5 +1,6 @@
 var _security = require("cloud-out-loud-security");
 const swaggerUi = require('swagger-ui-express');
+const path = require('path');
 
 exports._swag = {
     init: function(app, pjson) {
@@ -8,7 +9,7 @@ exports._swag = {
             _security._jwt.authorize(req, res, next);
         };
         
-        const swaggerDocument = require('../swagger/' + process.env.SWAGGER_FILE);
+        const swaggerDocument = require(path.join(__dirname + '../../../swagger/') + process.env.SWAGGER_FILE);
         var showExplorer = false;
         var options = {
             validatorUrl: null
